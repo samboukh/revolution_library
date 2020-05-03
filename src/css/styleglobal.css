@@ -1,0 +1,58 @@
+body{
+	margin: 0;
+	background-image: url(../img/mazarine1.jpg);
+	background-size: cover;
+}
+
+header ol{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+header ol li{
+	margin-top: 5%;
+	font-size: 125%;
+	transform: scale(1);
+	transition: transform 1s;
+}
+
+header ol li:hover{
+	transform: scale(1.05);
+	transition: transform 1s;
+}
+
+header ol li a{
+	color: #FAFAFA;
+	transition: color 0.3s;
+	text-decoration: none;
+}
+header ol li a:hover{
+	color: #b3b3b3;
+	transition: color 0.3s;
+}
+
+header img{
+	opacity: 1;
+	transition: opacity 0.5s
+}
+
+.logo_header{
+	width: 30%;
+	margin-left: 5%;
+}
+
+header img:hover{
+	opacity: 0.8;
+	transition: opacity 0.5s;
+}
+
+.logo_header_wrap{
+	float: left;
+}
+
+.livres{
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+}
