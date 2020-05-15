@@ -10,14 +10,14 @@ ini_set('display_errors', 'on');
 		<link rel="stylesheet" type="text/css" href="styleglobal.css">
 </head>
 <body>
-	<h2>Détails du livre</h2>
+	<h1>Détails du livre</h1>
 	<?php include "bdd.php"?>
 		<?php
-	$titre = $_GET['titre']; //Protection contre la saisie utilisateur et récupération de la variable titre
+	$titre = $_GET['titre'];
 
 	$req = $bdd->query('SELECT * FROM livre LEFT JOIN genre ON livre.genre = genre.id LEFT JOIN editeur ON editeur.id = livre.editeur LEFT JOIN langue ON langue.id = livre.langue WHERE titre LIKE "'.$titre.'%"');
 while ($d = $req->fetch()){
-	echo '<h1 style="text-align:center;">Détail du livre <strong style="text-decoration: underline;">'.$d["titre"].'</strong></h1>';
+	echo '<h2 style="text-align:center;">Détail du livre <strong style="text-decoration: underline;">'.$d["titre"].'</strong></h2>';
 	?>
 	<div class="detail">
 		<section class="details_Livre">
@@ -30,7 +30,8 @@ while ($d = $req->fetch()){
 				echo '<strong><u>Date de sortie</u></strong> : '.$d["annee"]. '<br>'; 
 				echo '<strong><u>ISBN</u></strong> : '.$d["isbn"]. '<br>';
 				?>
-						<a class="button_RON" href="panier_tmp.php?isbn=<?= ($d['isbn'])?>">Réserver</a>
+						<a class="button_RON" href="panier.php?isbn=<?= ($d['isbn'])?>">Réserver</a>
+						<a class="button_RON" href="modifier.php?isbn=<?= ($d['isbn'])?>">Modifier</a>
 			</section>
 		</div>
 
