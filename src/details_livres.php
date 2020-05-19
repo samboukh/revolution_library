@@ -30,8 +30,17 @@ while ($d = $req->fetch()){
 				echo '<strong><u>Date de sortie</u></strong> : '.$d["annee"]. '<br>'; 
 				echo '<strong><u>ISBN</u></strong> : '.$d["isbn"]. '<br>';
 				?>
+					<?php
+                    if( !empty($_SESSION['connexion']) && $_SESSION['connexion'] == "membre" || !empty($_SESSION['connexion']) && $_SESSION['connexion'] == "admin"){
+                    ?>
 						<a class="button_RON" href="panier.php?isbn=<?= ($d['isbn'])?>">Réserver</a>
-						<a class="button_RON" href="modifier.php?isbn=<?= ($d['isbn'])?>">Modifier</a>
+					<?php } ?>
+						<?php
+                    if( !empty($_SESSION['connexion']) && $_SESSION['connexion'] == "admin" ){
+                    ?>
+						<a class="bouton" href="modifier.php?isbn=<?= ($d['isbn'])?>">Modifier</a>
+						<a class="bouton" href="supprimer.php?isbn=<?= ($d['isbn'])?>">Supprimer</a>
+					<?php } ?>
 			</section>
 		</div>
 

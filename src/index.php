@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,8 +19,17 @@
 				<li><a href="index.php">Accueil</a></li>
 				<li><a href="livres.php">Livres</a></li>
 				<li><a href="auteur.php">Auteurs</a></li>
+				<?php
+                    if( !empty($_SESSION['connexion']) && $_SESSION['connexion'] == "membre" || !empty($_SESSION['connexion']) && $_SESSION['connexion'] == "admin"){
+                    ?>
 				<li><a href="formulaire_livre.php">Formulaire d'ajout</a></li>
-				<li><a href="connexion.php">Connexion</a></li>
+				<li><a href="deconnexion.php">Déconnexion</a></li>
+				<?php }else{
+                        ?>
+                        <li><a href="connexion.php" title="connexion">Connexion</a></li>
+                        <?php
+                        }
+                     ?>
 				<li><a href="contact.phtml">Contactez-nous</a></li>
 			</ol>
 		</header>
