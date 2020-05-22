@@ -20,9 +20,11 @@
 <head>
 	<title>Connexion/Inscription</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="styleglobal.css">
+    <link rel="stylesheet" type="text/css" href="./css/styleglobal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <?php include "header.php" ?>
 <form action="connexion.php" method="post">
     	<label>Pseudo:</label><p><input type="text" name="pseudo"/></p>
 		<label>Mot de passe:</label><p><input type="text" name="mdp"/></p>

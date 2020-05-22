@@ -8,8 +8,10 @@ ini_set('display_errors', 'on');
 	<title>Détails des livres</title>
 			<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="styleglobal.css">
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+	<?php include "header.php" ?>
 	<h1>Détails du livre</h1>
 	<?php include "bdd.php"?>
 		<?php
@@ -33,7 +35,7 @@ while ($d = $req->fetch()){
 					<?php
                     if( !empty($_SESSION['connexion']) && $_SESSION['connexion'] == "membre" || !empty($_SESSION['connexion']) && $_SESSION['connexion'] == "admin"){
                     ?>
-						<a class="button_RON" href="panier.php?isbn=<?= ($d['isbn'])?>">Réserver</a>
+						<a class="bouton" href="panier.php?isbn=<?= ($d['isbn'])?>">Réserver</a>
 					<?php } ?>
 						<?php
                     if( !empty($_SESSION['connexion']) && $_SESSION['connexion'] == "admin" ){
