@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="styleglobal.css">
 </head>
 <body>
+	<?php include "header.php" ?>
+
 <form action="inscription_req.php" method="post">
 		<label>Nom</label><p><input type="text" name="nom"/></p>
 		<label>Prénom</label><p><input type="text" name="prenom"/></p>

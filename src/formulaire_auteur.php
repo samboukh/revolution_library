@@ -9,6 +9,8 @@ session_start();
 	<title>Ajoutez un auteur</title>
 </head>
 <body>
+	<?php include "header.php" ?>
+
 	<h1>Faites nous découvrir un auteur</h1>
 <?php include "bdd.php"?>
 <form action="formulaire_auteur_req.php" onsubmit="return verifAuteur()" method="POST">

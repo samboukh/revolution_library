@@ -1,14 +1,8 @@
-<?php
-session_start();
-?>
-<!DOCTYPE html>
-<html>
-	<head> 
-		<meta charset="utf-8">
-	    <link rel="stylesheet" type="text/css" href="./css/homecss.css">
-	    <script src="https://kit.fontawesome.com/f2574f15cd.js" crossorigin="anonymous"></script>
-	</head>
-	<body>
+<head> 
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/styleglobal.css">
+    <script src="https://kit.fontawesome.com/f2574f15cd.js" crossorigin="anonymous"></script>
+</head>
 		<header>
 			<ol>
 				<div class="logoHeaderWrap">
@@ -31,13 +25,3 @@ session_start();
 				<li><a href="contact.phtml">Contactez-nous</a></li>
 			</ol>
 		</header>
-		<br><br>
-		
-		<div class="main_part">
-		<h2><i class="fas fa-map-pin"></i> Paris, France</h2>
-		<h1>Revolution Library</h1>
-		<p>La Librairie qui nourrit vos envies.</p>
-		</div>
-
-	</body>
-</html>

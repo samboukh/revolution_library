@@ -23,6 +23,8 @@
 	<link rel="stylesheet" type="text/css" href="styleglobal.css">
 </head>
 <body>
+    <?php include "header.php" ?>
+
 <form action="connexion.php" method="post">
     	<label>Pseudo:</label><p><input type="text" name="pseudo"/></p>
 		<label>Mot de passe:</label><p><input type="text" name="mdp"/></p>

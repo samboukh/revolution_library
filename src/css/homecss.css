@@ -1,16 +1,11 @@
 body{
 	background-image: url('../img/background3.jpg');
 	background-size: cover;
-}
-
-.main_header{
-	display: block;
-	position: relative;
+	font-family: 'Playfair Display', serif;
 }
 
 header{
-	overflow: hidden;
-	padding: 20px 10px;
+	width: 100%;
 }
 
 header ol{
@@ -56,16 +51,15 @@ header img:hover{
 	transition: opacity 0.5s;
 }
 
-.logo_header_wrap{
-	float: left;
-}
-
 .main_part{
 	display: flex;
 	flex-flow: column wrap-reverse;
 	align-content: space-between;
+	text-align: center;
+
 	color: #FFFFFF;
 	transform: scale(0.8);
+	padding: 50px;
 	
 }
 
@@ -76,3 +70,4 @@ header img:hover{
 .fa-map-pin{
 	color: #ff1a1a;
 }
+

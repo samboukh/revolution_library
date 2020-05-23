@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="styleglobal.css">
 </head>
 <body>
+	<?php include "header.php" ?>
 	<p>Bonjour 
 		<?php echo $_POST['Pseudo']
 		?>

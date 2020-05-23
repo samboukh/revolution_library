@@ -9,7 +9,9 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="styleglobal.css">
 </head>
 <body>
-		<h1>Faites nous décrouvrir un livre!</h1>
+    <?php include "header.php" ?>
+
+		<h1>Faites nous découvrir un livre!</h1>
 <?php include "bdd.php"?>
 
         <?php $editeur = $bdd->query('SELECT * FROM editeur');?>

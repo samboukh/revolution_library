@@ -11,6 +11,8 @@ ini_set('display_errors', 'on');
 </head>
 <body>
 	<h1>Détails du livre</h1>
+	<?php include "header.php" ?>
+
 	<?php include "bdd.php"?>
 		<?php
 	$titre = $_GET['titre'];
@@ -38,9 +40,10 @@ while ($d = $req->fetch()){
 						<?php
                     if( !empty($_SESSION['connexion']) && $_SESSION['connexion'] == "admin" ){
                     ?>
-						<a class="bouton" href="modifier.php?isbn=<?= ($d['isbn'])?>">Modifier</a>
-						<a class="bouton" href="supprimer.php?isbn=<?= ($d['isbn'])?>">Supprimer</a>
 					<?php } ?>
+					
+					<a class="bouton" href="modifier.php?isbn=<?= ($d['isbn'])?>">Modifier</a>
+					<a class="bouton" href="supprimer.php?isbn=<?= ($d['isbn'])?>">Supprimer</a>
 			</section>
 		</div>
 
